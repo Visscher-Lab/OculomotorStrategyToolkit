@@ -99,8 +99,8 @@ for i=firsttrial:totaltrial
     
     if length(FramesAfterTargetPresentation)>0 %at least one valid frame after target presentation
         
-        skipp(i)=1
-        firstframetarget=[firstframetarget FramesAfterTargetPresentation(1) ]
+        skipp(i)=1;
+        firstframetarget=[firstframetarget FramesAfterTargetPresentation(1) ];
         
         
         Heatmap.(TrialNum).TargetX=EyeSummary.(TrialNum).TargetX*pix_deg;
@@ -112,13 +112,7 @@ for i=firsttrial:totaltrial
         
         Heatmap.(TrialNum).TargetXRespectToCenter=Xcenter+Heatmap.(TrialNum).TargetX;
         Heatmap.(TrialNum).TargetYRespectToCenter=Ycenter+Heatmap.(TrialNum).TargetY;
-        
-        
-        if EyeSummary.(TrialNum).FixationIndices(end,2)==0
-            EyeSummary.(TrialNum).FixationIndices(end,2)=length(EyeSummary.(TrialNum).EyeData);
-        end
-        
-        
+                
         fix=0;
         cntr=0;
        % counterr=0;
